@@ -1,4 +1,4 @@
-package com.packt.cardatabase;
+package com.packt.shirtdatabase;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

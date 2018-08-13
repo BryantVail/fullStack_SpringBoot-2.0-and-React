@@ -1,12 +1,13 @@
-package com.packt.cardatabase;
+package com.packt.shirtdatabase;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CardatabaseApplication {
+public class ShirtdatabaseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CardatabaseApplication.class, args);
+
+		SpringApplication.run(ShirtdatabaseApplication.class, args);
 	}
 }
