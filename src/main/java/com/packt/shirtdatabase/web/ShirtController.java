@@ -15,11 +15,13 @@ public class ShirtController {
 	private static final Logger log = LoggerFactory.getLogger(ShirtController.class);
 
 	@RequestMapping(path = "/greeting", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ShirtResponse hello(){
+	public ShirtResponse SubmitShirtRequest(){
 		ShirtResponse response = new ShirtResponse();
 		response.setGreeting("Hey There");
 		response.setMessageOfTheDay("The shadow walks quietly in the night");
+
 		log.info("Returning Greeting: {}", response);
+
 		return response;
 	}//end hello
 }
