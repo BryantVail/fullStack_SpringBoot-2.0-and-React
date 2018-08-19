@@ -11,7 +11,7 @@ public class Customer {
 	private String username;
 	@Column(nullable=false)
 	private String email;
-	
+
 	private String city, state, zip, country;
 
 	//constructors	//

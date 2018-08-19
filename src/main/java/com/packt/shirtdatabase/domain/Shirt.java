@@ -5,6 +5,12 @@ import java.util.Date;
 
 @Entity
 public class Shirt {
+
+	//PROPS LISTED IN THIS OBJECT
+	//long id,
+	//String brand, shirtType, shirtColor, description
+	//int colorCount
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
