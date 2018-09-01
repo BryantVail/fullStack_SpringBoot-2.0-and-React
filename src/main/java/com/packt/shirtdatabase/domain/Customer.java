@@ -4,15 +4,23 @@ import javax.persistence.*;
 
 @Entity
 public class Customer {
+
+	/*
+		Properties of customer
+		String city, country, email,  state, username, zip
+	 */
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long customerId;
-	@Column(nullable=false)
-	private String username;
+	private String city, state, zip, country;
+
 	@Column(nullable=false)
 	private String email;
 
-	private String city, state, zip, country;
+	@Column(nullable=false)
+	private String username;
+
 
 	//constructors	//
 	public Customer(){}
@@ -38,9 +46,6 @@ public class Customer {
 	//end constructors //
 
 	//getters & setters
-	public long getId(){
-		return this.customerId;
-	}
 
 	public String getUsername(){
 		return this.username;

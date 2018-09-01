@@ -8,7 +8,7 @@ public class Shirt {
 
 	//PROPS LISTED IN THIS OBJECT
 	//long id,
-	//String brand, shirtType, shirtColor, description
+	//String brand, description, shirtColor, shirtType
 	//int colorCount
 
 	@Id
@@ -33,10 +33,11 @@ public class Shirt {
 	public Shirt(String brand, String shirtType, String shirtColor, int colorCount, String description){
 		super();
 		this.brand = brand;
-		this.shirtType = shirtType;
-		this.shirtColor = shirtColor;
-		this.colorCount = colorCount;
 		this.description = description;
+		this.colorCount = colorCount;
+		this.shirtColor = shirtColor;
+		this.shirtType = shirtType;
+
 	}
 	//end constructors
 
@@ -48,12 +49,12 @@ public class Shirt {
 		this.brand = brand;
 	}//end brand get/set
 
-	public String getShirtType(){
-		return this.shirtType;
+	public String getDescription(){
+		return description;
 	}
-	public void setShirtType(String shirtType){
-		this.shirtType = shirtType;
-	}//end shirtType get/set
+	public void setDescription(String description){
+		this.description = description;
+	}
 
 	public int getColorCount(){
 		return this.colorCount;
@@ -62,12 +63,19 @@ public class Shirt {
 		this.colorCount = colorCount;
 	}//end colorCount get/set
 
-	public String getDescription(){
-		return description;
+	public String getShirtColor(){
+		return this.shirtColor;
 	}
-	public void setDescription(String description){
-		this.description = description;
+	public void setShirtColor(String shirtColor){
+		this.shirtColor = shirtColor;
 	}
+
+	public String getShirtType(){
+		return this.shirtType;
+	}
+	public void setShirtType(String shirtType){
+		this.shirtType = shirtType;
+	}//end shirtType get/set
 
 
 }

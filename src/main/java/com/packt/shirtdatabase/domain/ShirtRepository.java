@@ -1,6 +1,6 @@
 package com.packt.shirtdatabase.domain;
 
-//import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 //import java.util.Date;
