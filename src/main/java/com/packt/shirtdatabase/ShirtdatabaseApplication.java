@@ -17,13 +17,14 @@ public class ShirtdatabaseApplication {
 	@Autowired
 	private ShirtRepository repository;
 
-	private static final Logger log =
+	private static final Logger logger =
 			LoggerFactory.getLogger(ShirtdatabaseApplication.class);
 
 	//main
 	public static void main(String[] args) {
+		//after adding this comment my project will restarted
 		SpringApplication.run(ShirtdatabaseApplication.class, args);
-		log.info("Spring Boot Logger");
+		logger.info("Spring Boot Logger");
 	}//end public static void main(String[] args){}
 
 	@Bean

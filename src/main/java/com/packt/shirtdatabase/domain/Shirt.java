@@ -25,7 +25,7 @@ public class Shirt {
 
 	private int colorCount;
 
-	@Column(nullable = false, length = 750)
+	@Column(nullable = false, length = 1000)
 	private String description;
 
 	//constructors

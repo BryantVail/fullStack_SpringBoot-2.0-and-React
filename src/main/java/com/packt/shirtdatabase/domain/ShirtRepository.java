@@ -1,12 +1,12 @@
 package com.packt.shirtdatabase.domain;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
+//import org.springframework.data.repository.PagingAndSortingRepository;
 
 //import java.util.Date;
 import java.util.List;
 
-public interface ShirtRepository extends PagingAndSortingRepository<Shirt, Long> {
+public interface ShirtRepository extends CrudRepository<Shirt, Long> {
 
 	//fetch Shirts by type, sortBy number of colors
 	List<Shirt> findByShirtTypeOrderByColorCount(String shirtType);
