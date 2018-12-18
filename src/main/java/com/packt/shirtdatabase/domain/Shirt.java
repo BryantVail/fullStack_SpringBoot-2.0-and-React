@@ -1,9 +1,13 @@
 package com.packt.shirtdatabase.domain;
 
-import javax.persistence.*;
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Column;
 
-@Entity
+
+@Entity //defines the class as an Entity
 public class Shirt {
 
 	//PROPS LISTED IN THIS OBJECT
@@ -15,6 +19,7 @@ public class Shirt {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	@Column(name="brand", nullable=true, length=100)
 	private String brand;
 
 	@Column(nullable = false)
