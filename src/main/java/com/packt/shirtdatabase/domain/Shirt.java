@@ -46,7 +46,15 @@ public class Shirt {
 	}
 	//end constructors
 
+	//PROPS LISTED IN THIS OBJECT
+	//long id,
+	//String brand, description, shirtColor, shirtType
+	//int colorCount
+
 	//getters & setters
+
+	/*id is Generated Automatically by the JPA */
+
 	public String getBrand() {
 		return this.brand;
 	}
@@ -84,3 +92,20 @@ public class Shirt {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

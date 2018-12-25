@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 //import java.util.Date;
 import java.util.List;
 
-public interface ShirtRepository extends CrudRepository<Shirt, Long> {
+public interface ShirtRepository extends CrudRepository<Shirt, Long>/*Takes in type 'Shirt', 'id' is of type 'Long'*/ {
 
 	//fetch Shirts by type, sortBy number of colors
 	List<Shirt> findByShirtTypeOrderByColorCount(String shirtType);
@@ -24,6 +24,7 @@ public interface ShirtRepository extends CrudRepository<Shirt, Long> {
 	List<Shirt> findByShirtColor(String shirtColor);
 
 	//fetch Shirts by colorCount
+	//@Query("select shirt from ")
 	List<Shirt> findByColorCount(int colorCount);
 
 
