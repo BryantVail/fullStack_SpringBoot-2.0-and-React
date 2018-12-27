@@ -8,4 +8,8 @@ import java.util.List;
 public interface CustomerRepository extends PagingAndSortingRepository<Customer, Long>{
 	//fetch customer byId
 	List<Customer> findByCustomerId(Long Id);
+
+	//find by email
+	List<Customer> findByEmail(String email);
+
 }

@@ -1,6 +1,7 @@
 package com.packt.shirtdatabase.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -21,13 +22,19 @@ public class Customer {
 	@Column(nullable=false)
 	private String username;
 
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="customer")
+	private List<Order> orders;
+
 
 	//constructors	//
+
+	//empty?
 	public Customer(){}
+
 	public Customer(String username, String email){
 		super();
-		this.username = username;
-		this.email = email;
+		setUsername(username);
+		setEmail(email);
 		this.city = "";
 		this.state= "";
 		this.zip = "";
@@ -47,9 +54,17 @@ public class Customer {
 
 	//getters & setters
 
+	public List<Order> getOrders(){
+		return orders;
+	}
+	public void setOrders(List<Order> orders){
+		this.orders = orders;
+	}
+
 	public String getUsername(){
 		return this.username;
 	}
+
 	public void setUsername(String username){
 		this.username = username;
 	}

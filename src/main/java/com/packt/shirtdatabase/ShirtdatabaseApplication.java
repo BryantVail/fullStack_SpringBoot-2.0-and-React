@@ -1,5 +1,7 @@
 package com.packt.shirtdatabase;
 //imports from project
+import com.packt.shirtdatabase.domain.Customer;
+import com.packt.shirtdatabase.domain.CustomerRepository;
 import com.packt.shirtdatabase.domain.Shirt;
 import com.packt.shirtdatabase.domain.ShirtRepository;
 
@@ -16,6 +18,9 @@ public class ShirtdatabaseApplication {
 
 	@Autowired
 	private ShirtRepository repository;
+
+	@Autowired
+	private CustomerRepository crepository;
 
 	private static final Logger logger =
 			LoggerFactory.getLogger(ShirtdatabaseApplication.class);
@@ -38,6 +43,10 @@ public class ShirtdatabaseApplication {
 			repository.save(new Shirt("Columbia", "dri-fit tee", "grey",
 					3, "work out shirt"));
 
+			crepository.save(new Customer("BigEddy", "BigEddy@gmail.com"));
+			crepository.save(new Customer("StephanieC", "stephanie.coral@gmail.com"));
+			crepository.save(new Customer("JohnV", "JohnWallace@gmail.com"));
+			
 		};
 	}//end CommandLineRunner runner()
 }
