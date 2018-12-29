@@ -1,8 +1,7 @@
 package com.packt.shirtdatabase.domain;
 
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
-
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class Order {
@@ -14,6 +13,14 @@ public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+
+	public LocalDateTime initDate;
+
+	//Constructors
+	public Order(){
+		this.initDate = LocalDateTime.now();
+
+	}
 
 
 //	public Order(){}

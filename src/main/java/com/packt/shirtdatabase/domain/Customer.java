@@ -11,6 +11,8 @@ public class Customer {
 		String city, country, email,  state, username, zip
 	 */
 
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long customerId;
@@ -54,6 +56,12 @@ public class Customer {
 
 	//getters & setters
 
+	//customerId
+	public long getCustomerId() {
+		return customerId;
+	}
+
+	//orders list
 	public List<Order> getOrders(){
 		return orders;
 	}
@@ -61,6 +69,7 @@ public class Customer {
 		this.orders = orders;
 	}
 
+	//username
 	public String getUsername(){
 		return this.username;
 	}
@@ -70,6 +79,7 @@ public class Customer {
 	}
 	//end username get/set
 
+	//email
 	public String getEmail(){
 		return this.email;
 	}
@@ -77,6 +87,7 @@ public class Customer {
 		this.email = email;
 	}//end email get/set
 
+	//city
 	public String getCity(){
 		return this.city;
 	}
